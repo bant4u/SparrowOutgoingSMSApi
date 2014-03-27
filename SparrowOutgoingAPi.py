@@ -5,6 +5,7 @@ An outgoing sms Api for SparrowSms using Python
 """
 import urllib
 import urllib2
+from urllib2 import HTTPError,URLError
 
 # Credential for api sms
 
@@ -28,7 +29,14 @@ values = {'client_id': client_id,
 
 data = urllib.urlencode(values)
 req = urllib2.Request(url, data)
-response = urllib2.urlopen(req)
-response_value = response.read()
-print response_value
+try:
+    response = urllib2.urlopen(req)
+    response_value = response.read()
+    print response_value
+except HTTPError as e:
+    print 'The server couldn\'t fulfill the request.'
+    print 'Error code: ', e.code
+except URLError as e:
+    print 'We failed to reach a server.'
+    print 'Reason: ', e.reason
 
