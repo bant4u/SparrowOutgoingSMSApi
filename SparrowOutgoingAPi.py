@@ -10,7 +10,7 @@ from urllib2 import HTTPError,URLError
 # Credential for api sms
 
 client_id = ''
-username = 'bijaypant'
+username = 'username'
 password = ''
 sender = 5455
 to = 9848422934
