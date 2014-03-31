@@ -1,6 +1,6 @@
 __author__ = 'bijay'
 """
-An outgoing sms Api for SparrowSms using Python
+An outgoing sms Api call script for SparrowSms using Python
 
 """
 import urllib
@@ -10,12 +10,11 @@ from urllib2 import HTTPError,URLError
 # Credential for api sms
 
 client_id = ''
-username = ''
+username = 'bijaypant'
 password = ''
 sender = 5455
 to = 9848422934
-text_message = 'Testing sparrow sms'
-
+text_message = 'hello sparrow!!!'
 #URL building and calling part
 
 url = "http://api.sparrowsms.com/call_in.php?"
